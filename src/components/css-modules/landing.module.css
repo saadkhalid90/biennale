@@ -1,0 +1,37 @@
+.landingContain {
+  width: 100vw;
+  height: 100vh;
+  background-color: #01132D;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.videoContain {
+  margin-top: -80px;
+  margin-bottom: -110px;
+}
+
+
+
+.titleLBF, .titleDesc {
+  font-family: 'Poppins', sans-serif;
+  color: #fac400;
+  z-index: 5;
+}
+
+.titleLBF {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: -0px;
+}
+
+.titleDesc {
+  font-size: 1.15rem;
+  font-weight: 400;
+  display: relative;
+  top: -200px;
+  max-width: 275px;
+}
+
