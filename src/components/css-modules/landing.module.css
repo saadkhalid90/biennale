@@ -1,37 +1,64 @@
 .landingContain {
   width: 100vw;
   height: 100vh;
-  background-color: #01132D;
+  background-color: #041D36;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.videoContain {
-  margin-top: -80px;
-  margin-bottom: -110px;
+.landingBGCircle {
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
 
+.landingContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 570px;
+  height: 570px;
+  background-color: #01132d;
+  border-radius: 50%;
+}
 
+.logoContain {
+  width: 40px;
+}
+
+.logoContain img {
+  width: 100%;
+}
+
+.videoContain {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 
 .titleLBF, .titleDesc {
-  font-family: 'Poppins', sans-serif;
-  color: #fac400;
+  color: #fff;
   z-index: 5;
 }
 
 .titleLBF {
-  font-size: 1.8rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
   font-weight: 500;
   margin-bottom: -0px;
+  margin-top: 20px;
 }
 
 .titleDesc {
-  font-size: 1.15rem;
+  font-family: 'Special Elite', cursive;
+  font-size: 1rem;
   font-weight: 400;
   display: relative;
   top: -200px;
-  max-width: 275px;
+  max-width: 300px;
 }
 
