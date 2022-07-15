@@ -1,35 +1,27 @@
 .landingContain {
   width: 100vw;
   height: 100vh;
-  background-color: #041D36;
+  background-color: #01132d;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.landingBGCircle {
-  position: absolute;
-  top: 0px;
-  left: 0px;
 }
 
 .landingContent {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+  height: 70vh;
   align-items: center;
   position: relative;
-  width: 570px;
-  height: 570px;
-  background-color: #01132d;
-  border-radius: 50%;
-  box-shadow: 0px 0px 0px #fff;
+  z-index: 2;
+  width: 100%;
 }
 
 .logoContain {
-  width: 40px;
+  width: 60px;
 }
 
 .logoContain img {
@@ -37,30 +29,39 @@
 }
 
 .videoContain {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.abs_video {
+  position: absolute;
 }
 
 .titleLBF, .titleDesc {
   color: #fff;
-  z-index: 5;
 }
 
 .titleLBF {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.5rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 3.5rem;
   font-weight: 500;
-  margin-bottom: -0px;
-  margin-top: 20px;
+  margin: 0px;
+  mix-blend-mode: difference;
+  z-index: 2;
 }
 
 .titleDesc {
+  position: absolute;
+  bottom: 16%;
   font-family: 'Special Elite', cursive;
   font-size: 1rem;
   font-weight: 400;
-  display: relative;
-  top: -200px;
-  max-width: 300px;
 }
 
 .enterButton {
@@ -69,7 +70,6 @@
   color: #fff;
   padding: 0.25em 1em;
   border: solid 1px currentColor;
-  margin-top: 30px;
   border-radius: 5px;
   display: inline-block;
   cursor: pointer;

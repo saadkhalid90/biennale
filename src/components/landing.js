@@ -9,17 +9,17 @@ function Landing() {
         <div className={styles.logoContain}>
           <img src={lbfLogo}></img>
         </div>
+        <p className={styles.titleDesc}>
+          75 Years of Cultural Histories of Pakistan
+        </p>
+        <a className={styles.enterButton}>ENTER</a>
+      </div>
+      <div className={styles.videoContain}>
         <h3 className={styles.titleLBF}>LBF VIRTUAL MUSEUM</h3>
-        <div className={styles.videoContain}>
-          <video width="350" autoPlay loop muted>
+          <video className={styles.abs_video} width="350" autoPlay loop muted>
             <source src={video75} type="video/mp4" />
           </video>
         </div>
-        <p className={styles.titleDesc}>
-          Years of Cultural Histories of Pakistan
-        </p>
-      </div>
-      <a className={styles.enterButton}>ENTER</a>
     </div>
   );
 }
