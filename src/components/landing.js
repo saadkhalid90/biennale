@@ -19,6 +19,7 @@ function Landing() {
           Years of Cultural Histories of Pakistan
         </p>
       </div>
+      <a className={styles.enterButton}>ENTER</a>
     </div>
   );
 }
