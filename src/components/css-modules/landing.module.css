@@ -45,7 +45,6 @@
   font-size: 3.5rem;
   font-weight: 500;
   margin: 0px;
-  mix-blend-mode: difference;
   z-index: 2;
   position: absolute;
 }
