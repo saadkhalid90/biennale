@@ -1,0 +1,7 @@
+.customCursor {
+  /* transition: top 500ms ease-out, left 300ms ease-in;  */
+  z-index: 10;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  transition: transform 200ms ease-in;
+}
