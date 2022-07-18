@@ -1,0 +1,18 @@
+.pageContain {
+  background-image: url(../../resources/masooma/PanoOUTL.png);
+  background-repeat: repeat-x;
+  height: 100vh;
+  width: calc(100vh * 20);
+  overflow-x: hidden;
+  animation: imagePan 300s linear infinite;
+  background-size: cover;
+}
+
+@keyframes imagePan {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% + 100vw));
+  }
+}

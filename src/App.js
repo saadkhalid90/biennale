@@ -2,6 +2,7 @@ import "./App.css";
 import { useState, useCallback, useEffect } from "react";
 import Landing from "./components/landing";
 import CustomCursor from "./components/customCursor";
+import Impunity from "./components/impunity";
 
 function App() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -34,8 +35,14 @@ function App() {
 
   return (
     <div className="App" onMouseMove={handleMouseMove}>
-      <CustomCursor mousePos={mousePos} cursorWidth={cursorWidth}/>
-      <Landing handleMouseOver={handleMouseOver} handleMouseOut={handleMouseOut}/>  
+     
+      {
+        /*
+        <CustomCursor mousePos={mousePos} cursorWidth={cursorWidth}/>
+        <Landing handleMouseOver={handleMouseOver} handleMouseOut={handleMouseOut}/> 
+        */
+      }
+      <Impunity/>
     </div>
   );
 }
