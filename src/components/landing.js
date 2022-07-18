@@ -21,6 +21,7 @@ function Landing({ handleMouseOver, handleMouseOut }) {
             <source src={video75} type="video/mp4" />
           </video>
         </div>
+
         <p className={styles.titleDesc}>
           75 Years of Cultural Histories of Pakistan
         </p>
