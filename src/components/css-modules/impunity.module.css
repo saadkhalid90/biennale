@@ -1,11 +1,58 @@
 .pageContain {
-  background-image: url(../../resources/masooma/PanoOUTL.png);
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+.panomContain {
+  background-image: url(../../resources/masooma/Wency/PanoOUTL.png);
   background-repeat: repeat-x;
   height: 100vh;
   width: calc(100vh * 20);
   overflow-x: hidden;
   animation: imagePan 300s linear infinite;
   background-size: cover;
+}
+
+.fixedVideoContain {
+  position: fixed;  
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  bottom: 100%;
+  right: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.videoContain {
+  width: 640px;
+  height: 360px;
+  margin-left: 100px;
+  pointer-events: none;
+}
+
+.lyricsContain {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  height:50px;
+}
+
+.lyricsContain span {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  font-family: gotham;
+  font-size: 22px;
+  color: white;
+}
+
+.lyricsContain:first-child {
+  position: relative;
 }
 
 @keyframes imagePan {
