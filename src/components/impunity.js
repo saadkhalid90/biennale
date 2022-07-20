@@ -1,25 +1,26 @@
 import styles from "./css-modules/impunity.module.css";
 import circlesAudio from "../resources/masooma/Wency/Audio_Loop.mp3";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import lyrics from "./lyrics";
 
 function Impunity() {
   const [audioPlayed, setAudioPlayed] = useState(false);
+  const lyricContainRef = useRef();
   const onPlayHandler = (e) => setAudioPlayed(true);
 
   useEffect(() => {
     if (audioPlayed) {
-      for (const lyric of lyrics) {
-      }
-      setTimeout(() => {
-        console.log("3 seconds");
-      }, 3000);
-      setTimeout(() => {
-        console.log("10 seconds");
-      }, 10000);
-      setTimeout(() => {
-        console.log("5 seconds");
-      }, 5000);
+      lyrics.forEach((lyric, idx) => {
+        setTimeout(() => {
+          console.log(lyric.lyric);
+          lyricContainRef.current.children[idx].classList.add("active");
+          if (idx > 0) {
+            lyricContainRef.current.children[idx - 1].classList.remove(
+              "active"
+            );
+          }
+        }, lyric.time * 1000);
+      });
     }
   }, [audioPlayed]);
 
@@ -41,9 +42,11 @@ function Impunity() {
           <source src={circlesAudio} type="audio/mpeg" />
         </audio>
       </div>
-      <div className={styles.lyricsContain}>
+      <div className={styles.lyricsContain} ref={lyricContainRef}>
         {lyrics.map((lyric, idx) => (
-          <span key={`lyric{${idx + 1}`}>{lyric.lyric}</span>
+          <span key={`lyric{${idx + 1}`}>
+            {lyric.lyric}
+          </span>
         ))}
       </div>
     </div>
