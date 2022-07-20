@@ -13,12 +13,14 @@ function Impunity() {
       lyrics.forEach((lyric, idx) => {
         setTimeout(() => {
           console.log(lyric.lyric);
-          lyricContainRef.current.children[idx].classList.add("active");
-          if (idx > 0) {
+          lyricContainRef.current.children[idx].classList.add(styles.active);
+          (idx > 0) ? 
             lyricContainRef.current.children[idx - 1].classList.remove(
-              "active"
-            );
-          }
+              styles.active
+            ) : 
+            lyricContainRef.current.children[lyrics.length - 1].classList.remove(
+              styles.active
+          
         }, lyric.time * 1000);
       });
     }
@@ -44,7 +46,7 @@ function Impunity() {
       </div>
       <div className={styles.lyricsContain} ref={lyricContainRef}>
         {lyrics.map((lyric, idx) => (
-          <span key={`lyric{${idx + 1}`}>
+          <span className={styles.lyricSpan} key={`lyric{${idx + 1}`}>
             {lyric.lyric}
           </span>
         ))}

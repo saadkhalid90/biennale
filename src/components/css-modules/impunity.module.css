@@ -42,7 +42,7 @@
   height:50px;
 }
 
-.lyricsContain span {
+.lyricSpan {
   position: absolute;
   text-align: center;
   width: 100%;
@@ -52,7 +52,7 @@
   opacity: 0;
 }
 
-.lyricsContain span.active {
+.active {
   opacity: 1;
 }
 

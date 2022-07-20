@@ -1,7 +1,7 @@
 const lyrics = [
   {
     lyric: "Undulating, contemplating,",
-    time: 17
+    time: 17.25
   },
   {
     lyric: "wonder then frown",
@@ -13,7 +13,7 @@ const lyrics = [
   },
   {
     lyric: "the news from the ground",
-    time: 31
+    time: 30.5
   },
   {
     lyric: "Round and round we go",
@@ -21,11 +21,11 @@ const lyrics = [
   },
   {
     lyric: "round and round",
-    time: 40
+    time: 39.5
   },
   {
     lyric: "in circles down",
-    time: 43
+    time: 43.25
   },
   {
     lyric: "down we go",
@@ -33,11 +33,15 @@ const lyrics = [
   },
   {
     lyric: "down underground",
-    time: 48
+    time: 48.5
+  },
+  {
+    lyric: "",
+    time: 53
   },
   {
     lyric: "Infuriating, heart-breaking",
-    time: 70
+    time: 70.6
   },
   {
     lyric: "human so unsound",
@@ -45,7 +49,7 @@ const lyrics = [
   },
   {
     lyric: "morning waking, horrors breaking",
-    time: 79
+    time: 79.6
   },
   {
     lyric: "the gods nowhere around",
@@ -69,7 +73,11 @@ const lyrics = [
   },
   {
     lyric: "down underground",
-    time: 103
+    time: 102.5
+  },
+  {
+    lyric: "",
+    time: 107
   },
   {
     lyric: "morning breaking, horrors waking",
@@ -105,7 +113,15 @@ const lyrics = [
   },
   {
     lyric: "down underground",
-    time: 157
+    time: 156.5
+  },
+  {
+    lyric: "down underground",
+    time: 161
+  },
+  {
+    lyric: "",
+    time: 163
   },
 ];
 
