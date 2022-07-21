@@ -1,31 +1,26 @@
 import styles from "./css-modules/impunity.module.css";
 import circlesAudio from "../resources/masooma/Wency/Audio_Loop.mp3";
+import InfinitePanam from "./p5/panam";
+import panoImage from '../resources/masooma/Wency/PanoOUTL.jpg'
+
 import { useState, useEffect } from "react";
 import lyrics from "./lyrics";
 
 function Impunity() {
   const [audioPlayed, setAudioPlayed] = useState(false);
+
   const onPlayHandler = (e) => setAudioPlayed(true);
 
   useEffect(() => {
     if (audioPlayed) {
-      for (const lyric of lyrics) {
-      }
-      setTimeout(() => {
-        console.log("3 seconds");
-      }, 3000);
-      setTimeout(() => {
-        console.log("10 seconds");
-      }, 10000);
-      setTimeout(() => {
-        console.log("5 seconds");
-      }, 5000);
     }
   }, [audioPlayed]);
 
   return (
     <div className={styles.pageContain}>
-      <div className={styles.panomContain} />
+      <div className={styles.panomContainer}>
+        <InfinitePanam imageSrc={panoImage}/>
+      </div>
       <div className={styles.fixedVideoContain}>
         <div className={styles.videoContain}>
           <iframe
