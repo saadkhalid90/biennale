@@ -1,5 +1,7 @@
 import styles from "./css-modules/impunity.module.css";
 import circlesAudio from "../resources/masooma/Wency/Audio_Loop.mp3";
+import InfinitePanam from "./p5/panam";
+import panoImage from '../resources/masooma/Wency/PanoOUTL.jpg';
 import { useState, useEffect, useRef } from "react";
 import lyrics from "./lyrics";
 
@@ -33,7 +35,9 @@ function Impunity() {
 
   return (
     <div className={styles.pageContain}>
-      <div className={styles.panomContain} />
+      <div className={styles.panomContainer}>
+        <InfinitePanam imageSrc={panoImage}/>
+      </div>
       <div className={styles.fixedVideoContain}>
         <div className={styles.videoContain}>
           <iframe

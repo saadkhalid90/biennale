@@ -6,13 +6,9 @@
 }
 
 .panomContain {
-  background-image: url(../../resources/masooma/Wency/PanoOUTL.png);
-  background-repeat: repeat-x;
+  background: url(../../resources/masooma/Wency/PanoOUTL.png) repeat-x;
   height: 100vh;
-  width: calc(100vh * 20);
-  overflow-x: hidden;
-  animation: imagePan 300s linear infinite;
-  background-size: cover;
+  width: calc(100vh * 20 * 2);
 }
 
 .fixedVideoContain {
