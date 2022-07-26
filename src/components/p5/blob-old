@@ -1,0 +1,56 @@
+import React from "react";
+import Sketch from "react-p5";
+
+let r = 100;
+const count = 500;
+let y = 0;
+let p5_gl;
+
+function Blob (props) {
+	const setup = (p5, canvasParentRef) => {
+		// use parent to render the canvas in this ref
+		// (without that p5 will render the canvas outside of your component)
+
+		p5.createCanvas(window.innerWidth, window.innerHeight).parent(canvasParentRef);
+        p5.background('#fff');
+        p5.noStroke()
+        p5.colorMode(p5.HSB, 100);
+        p5.blendMode(p5.MULTIPLY);
+        p5.noiseDetail(2);
+        p5_gl = p5;
+	};
+
+	const draw = (p5) => {
+        p5.blendMode(p5.BLEND);
+        p5.background('#fff');
+        p5.blendMode(p5.MULTIPLY);
+        p5.translate(p5.width / 2, p5.height / 2);
+        drawCircle(p5.color(15 ,100, 100), 1000);
+        drawCircle(p5.color(60 ,100, 60), 0.4);
+        drawCircle(p5.color(0 ,100, 80), 0.8);
+        y += 0.01;
+	};
+
+    function drawCircle (color, diff) {
+        p5_gl.beginShape()
+        p5_gl.fill(color)
+        for (let i = 0; i <= count; i++) {
+            const deg = (p5_gl.TWO_PI / count) * (i % count)
+            
+            const nr = p5_gl.noise(
+                (p5_gl.sin(deg) + 1) * 0.4, 
+                (p5_gl.cos(deg) + 1) * 0.4, 
+                y + diff
+            ) * 100 + r
+            p5_gl.vertex(
+                p5_gl.sin(deg) * nr, 
+                p5_gl.cos(deg) * nr
+            )
+        }
+        p5_gl.endShape()
+    };
+
+	return <Sketch setup={setup} draw={draw} />;
+};
+
+export default Blob;

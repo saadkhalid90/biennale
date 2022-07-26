@@ -1,195 +1,26 @@
 .landingContain {
   width: 100vw;
   height: 100vh;
-  background-color: #01132d;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.museumText {
-  color: white;
-}
-
-@supports(-webkit-text-stroke: 2px white){
-  .museumText{
-      color: transparent;
-      -webkit-text-stroke: 2px white ;
-      //text-shadow: 0px 0px 01em white;
-      //animation: flickerMin 500ms linear alternate infinite;
-  }
-}
-
-@keyframes flicker {
-  0% {
-    opacity: 0.9;
-  }
-  20% {
-    opacity: 1;
-  }
-  30% {
-    opacity: 0.95;
-  }
-  40% {
-    opacity: 0.75;
-  }
-  60% {
-    opacity: 0.85
-  }
-  80% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 0.97;
-  }
-  100% {
-    opacity: 0.7;
-  }
-}
-
-@keyframes flickerMin {
-  0% {
-    opacity: 0.9;
-  }
-  20% {
-    opacity: 1;
-  }
-  30% {
-    opacity: 0.95;
-  }
-  40% {
-    opacity: 0.91;
-  }
-  60% {
-    opacity: 0.92
-  }
-  80% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 0.97;
-  }
-  100% {
-    opacity: 0.85;
-  }
-}
-
-
-
-.landingContent {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  z-index: 2;
-  width: 100%;
-}
-
-.particles_contain {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100vh;
-}
-
-.logoContain {
-  width: 50px;
-}
-
-.logoContain img {
-  width: 100%;
-}
-
-.videoContain {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-
-.titleLBF, .titleDesc {
-  color: #fff;
-}
-
-.titleLBF {
-  font-family: 'Inter', sans-serif;
-  font-size: 3.5rem;
-  font-weight: 500;
-  margin: 0px;
-  z-index: 2;
-  position: absolute;
-}
-
-.titleDesc {
-  font-family: 'Special Elite', cursive;
-  font-size: 1rem;
-  font-weight: 400;
-  margin: 0px;
-}
-
-.enterButton {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.2rem;
-  color: #fff;
-  margin-top: 30px;
-  padding: 0.25em 1em;
-  border: solid 1px #fff;
-  border-radius: 5px;
-  display: inline-block;
-  cursor: pointer;
-  text-shadow: 0px 0px 0.25em hsla(0, 0%, 100%, 0.5), 0px 0px 0.125em #fff;
-  box-shadow: 0px 0px 0.20em #fff, inset 0px 0px 0.20em #fff;
-  position: relative;
-  background: none;
-}
-
-.enterButton::before {
   background-color: #fff;
-  content: '';
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transform: perspective(1em) rotateX(45deg) scale(0.8, 0.28);
-  filter: blur(2em);
-  pointer-events: none;
-  opacity: 0.8;
+  display: flex;
 }
 
-.enterButton::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  box-shadow: 0px 0px 0.8em #fff;
-  border-radius: 5px;
-  opacity: 0;
-  background-color: #fff;
-  z-index: -1;
-  transition: opacity 50ms ease-in;
+.side_bar {
+  width: 20%;
 }
 
-.enterButton:hover 
- {
-  color: #01132d;
-  text-shadow: none;
-  box-shadow: 0px 0px 0.20em #fff, inset 0px 0px 0.20em #fff;
+.projects_container {
+  width: calc(80% - 60px);
+  display: flex;
+  box-sizing: border-box;
+  margin: 10px 30px;
 }
 
-.enterButton:hover::after {
-  opacity: 1;
+.project_container {
+  width: 20%;
 }
 
-.enterButton:hover::before {
-  opacity: 1;
-  filter: blur(2em);
+.project_container > canvas {
+  max-width: 100%;
+  max-height: 100%;
 }
